@@ -8433,6 +8433,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libspcom.so",
             ],
             shared_libs: [
+                "libion",
                 "libutils",
                 "libcutils",
                 "liblog",

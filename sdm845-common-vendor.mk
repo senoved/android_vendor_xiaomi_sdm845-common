@@ -201,6 +201,11 @@ PRODUCT_PACKAGES += \
     audio.primary.sdm845 \
     sound_trigger.primary.sdm845 \
     libFileMux_proprietary \
+    fm_helium \
+    libfm-hci \
+    vendor.qti.hardware.fm@1.0 \
+    vendor.qti.hardware.fm@1.0-impl \
+    vendor.qti.hardware.fm@1.0_vendor \
     libOmxVideoDSMode \
     libOmxVpp \
     liba2dpoffload \

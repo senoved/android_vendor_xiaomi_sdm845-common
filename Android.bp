@@ -4619,7 +4619,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.esepowermanager@1.1-impl",
+    name: "vendor.qti.esepowermanager@1.0-impl",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -4627,16 +4627,17 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so",
+                "proprietary/vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so",
             ],
             shared_libs: [
                 "libbase",
+                "libhwbinder",
                 "libcutils",
                 "libhidlbase",
+                "libhidltransport",
                 "liblog",
                 "libutils",
                 "vendor.qti.esepowermanager@1.0",
-                "vendor.qti.esepowermanager@1.1",
                 "libc++",
                 "libc",
                 "libm",
@@ -8605,35 +8606,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.esepowermanager@1.1",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.esepowermanager@1.1.so",
-            ],
-            shared_libs: [
-                "vendor.qti.esepowermanager@1.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.alarm@1.0",
     owner: "xiaomi",
     strip: {
@@ -11750,15 +11722,16 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "vendor.qti.esepowermanager@1.1-service",
+    name: "vendor.qti.esepowermanager@1.0-service",
     owner: "xiaomi",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/hw/vendor.qti.esepowermanager@1.1-service",
+                "proprietary/vendor/bin/hw/vendor.qti.esepowermanager@1.0-service",
             ],
             shared_libs: [
                 "libcutils",
+                "libhwbinder",
                 "libbase",
                 "libutils",
                 "libhardware_legacy",
@@ -11766,7 +11739,8 @@ cc_prebuilt_binary {
                 "libQSEEComAPI",
                 "liblog",
                 "libhidlbase",
-                "vendor.qti.esepowermanager@1.1",
+                "libhidltransport",
+                "vendor.qti.esepowermanager@1.0",
                 "libc++",
                 "libc",
                 "libm",
